@@ -1,7 +1,7 @@
 ## Package backoff-sys
 
 <img align="right" src="https://raw.githubusercontent.com/go-playground/backoff-sys/master/logo.jpg">![Project status](https://img.shields.io/badge/version-1.0.0-green.svg)
-[![Build Status](https://travis-ci.org/go-playground/backoff-sys.svg?branch=master)](https://travis-ci.org/go-playground/backoff-sys)
+[![Actions Status](https://github.com/go-playground/backoff-sys/workflows/Lint%20%26%20Test/badge.svg)](https://github.com/go-playground/backoff-sys/actions)
 [![GoDoc](https://godoc.org/github.com/go-playground/backoff-sys?status.svg)](https://pkg.go.dev/github.com/go-playground/backoff-sys)
 ![License](https://img.shields.io/dub/l/vibe-d.svg)
 
