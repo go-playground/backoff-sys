@@ -69,11 +69,12 @@ type Exponential struct {
 
 // Duration accepts attempt and returns the backoff duration o sleep for.
 func (e Exponential) Duration(attempt int) time.Duration {
-	d := int64(math.Pow(e.factor, float64(attempt)) * e.interval)
+	d := math.Pow(e.factor, float64(attempt)) * e.interval
 	if e.jitter > 0 {
-		d += rand.Int63n(e.jitter)
+		d += float64(rand.Int63n(e.jitter))
 	}
-	if e.max > 0 && d > e.max {
+	i := int64(d)
+	if math.IsInf(d, 1) || i < 0 || (e.max > 0 && i > e.max) {
 		return time.Duration(e.max)
 	}
 	return time.Duration(d)
