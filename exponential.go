@@ -55,7 +55,8 @@ func (e ExponentialBuilder) Max(max time.Duration) ExponentialBuilder {
 	return e
 }
 
-// MaxAttempts sets the maximum number of attempts before the Sleep(...) function begins returning ErrMaxAttemptsReached.
+// MaxAttempts sets the maximum number of attempts before the Sleep(...) function begins returning
+// ErrMaxAttemptsReached, by default is unlimited.
 func (e ExponentialBuilder) MaxAttempts(max int) ExponentialBuilder {
 	e.maxAttempts = max
 	return e
