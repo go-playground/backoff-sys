@@ -1,5 +1,10 @@
 name: Lint & Test
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
 jobs:
   test:
     strategy:
