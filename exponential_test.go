@@ -1,9 +1,8 @@
 package backoff
 
 import (
-	. "github.com/go-playground/assert/v2"
-
 	"context"
+	. "github.com/go-playground/assert/v2"
 	"testing"
 	"time"
 )
