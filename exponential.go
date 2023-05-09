@@ -2,15 +2,13 @@ package backoff
 
 import (
 	"context"
-	"errors"
+	"github.com/go-playground/pkg/v5/errors"
 	"math"
 	"math/rand"
 	"time"
 )
 
-var (
-	ErrMaxAttemptsReached = errors.New("max attempts reached")
-)
+var ErrMaxAttemptsReached = errorsext.ErrMaxAttemptsReached
 
 // ExponentialBuilder helps to build the final exponential backoff entity
 type ExponentialBuilder struct {
